@@ -1,0 +1,8 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+전 모든 파일이 저를 인클루드할겁니다.<br>
+굳이 include 지시자를 사용안해도 되요<br>
+<c:forEach items="${menuList}" var="m">
+	<a href="${root}/${m.mUrl}" title="${m.mDesc}" style="color:black">${m.mNum}. ${m.mName}</a><br>
+</c:forEach>
