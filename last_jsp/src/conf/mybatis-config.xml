@@ -3,6 +3,9 @@
 "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 <properties resource="conf/dbconf.properties"/>
+	<typeAliases>
+		<typeAlias type="com.last.jsp.vo.UserInfo" alias="user" />
+	</typeAliases>
 	<environments default="dev">
 		<environment id="dev">
 			<transactionManager type="jdbc" />
@@ -16,5 +19,7 @@
 	</environments>
 	<mappers>
 	<mapper resource="sql/menu.xml"/>
+	<mapper resource="sql/user.xml"/>
+	<mapper resource="sql/common.xml"/>
 	</mappers>
 </configuration>
